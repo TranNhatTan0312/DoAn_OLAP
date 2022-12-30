@@ -1,0 +1,155 @@
+﻿
+--Câu 1: Thống kê thông tin 10 mẫu nước có tỉ lệ nhiễm nhựa cao nhất ?
+select [Measures].[Maximum Composition Glass Percent] on columns,
+TOPCOUNT({[Dim Water].[Water Name].[Water Name].members},
+10,[Measures].[Maximum Composition Glass Percent])on rows
+from [Water Clean]
+--Câu 2: Thống kê quốc gia sở hữu mẫu nước có tỉ lệ nitrat bé hơn hoặc bằng tiêu chuẩn (<50mg/L)?
+select [Measures].[Maximum Result Mean Value]  on 0,
+non empty generate( [Dim Country].[Country Name].[Country Name].members,
+FILTER([Dim Country].[Country Name].[Country Name].members , [Measures].[Maximum Result Mean Value] <= 50)) on 1
+from [Water Clean];
+
+--Câu 3: Thống kê quốc gia sở hữu mẫu nước có tỉ lệ nước nhiễm kim loại lớn nhất theo từng năm ?
+select [Measures].[Maximum Composition Metal Percent] on 0,
+non empty generate ( [Dim Date].[Year].[Year].members,
+topcount ([Dim Date].[Year].currentmember * [Dim Country].[Country Name].[Country Name], 1,[Measures].[Maximum Composition Metal Percent])) on 1
+from [Water Clean];
+
+--Câu 4: Thống kê số lượng mẫu nước của Pháp, Anh theo từng năm?
+select [Measures].[Fact Count] on 0,
+non empty generate ( [Dim Date].[Year].[Year].members,
+filter ([Dim Date].[Year].currentmember *[Dim Country].[Country Name].[Country Name] ,[Dim Country].[Country Name].currentmember.name='France') 
++ filter ([Dim Date].[Year].currentmember *[Dim Country].[Country Name].[Country Name] ,[Dim Country].[Country Name].currentmember.name='United Kingdom') 
+) on 1
+from [Water Clean];
+
+--Câu 5: Thống kê loại xét nghiệm thuộc tính nào được thực hiện nhiều nhất và liệt kê tổng số lần ?
+select [Measures].[Fact Count] on columns,
+TOPCOUNT([Dim Water].[Observed Property].[Observed Property].members,1,[Measures].[Fact Count])on rows
+from [Water Clean]
+--Câu 6: Thống kê quốc gia có mật độ dân số lớn nhất, trong số các quốc gia có hơn 100 mẫu nước,
+--liệt kê theo năm
+select [Measures].[Population Density] on 0,
+	non empty generate ( [Dim Date].[Year].[Year].members,
+	topcount ( 
+[Dim Date].[Year].currentmember * [Dim Country].[Country Name].[Country Name] ,1,[Measures].[Population Density]  ))	
+		having [Measures].[Fact Count] > 100 on 1
+from [Water Clean];
+
+--Câu 7: Với mỗi quốc gia, hãy liệt kê 2 mẫu nước xét nghiệm nhiều nhất trong mỗi năm?
+select [Measures].[Fact Count] on 0,
+non empty generate ([Dim Country].[Country Name].[Country Name] * [Dim Date].[Year].[Year],
+topcount([Dim Country].[Country Name].currentmember *
+[Dim Water].[Water Name].[Water Name].members *[Dim Date].[Year].[Year].members ,
+2, [Measures].[Fact Count]))on 1
+from [Water Clean];
+
+--Câu 8: Với mỗi mã mẫu nước, cho biết lượng % nhựa cao nhất đã từng được xét nghiệm? 
+select [Measures].[Maximum Composition Plastic Percent] on columns,
+non empty order({[Dim Water].[Water Name].[Water Name].members}
+,[Measures].[Maximum Composition Plastic Percent],DESC) on rows
+from [Water Clean];
+
+--Câu 9: Liệt kê số lượng xét nghiệm của từng quốc gia trong năm 2009, 
+--sắp xếp theo thứ tự tăng dần số lượng xét nghiệm?  
+select {[Measures].[Fact Count]}on columns,
+non empty order({[Dim Country].[Country Name].[Country Name].members}
+,[Measures].[Fact Count],ASC) on rows
+from [Water Clean]
+where [Dim Date].[Year].&[2009]; 
+ -- Câu 10: Với mỗi loại nước, liệt kê 1 mẫu đo nhiều nhất tại quốc gia bắt đầu bằng chữ ‘F’, 
+ --xếp theo số lượng mẫu giảm dần
+ select [Measures].[Fact Count] on 0,
+ non empty generate ([Dim Country].[Country Name].[Country Name].members,
+topcount ( 
+filter ([Dim Country].[Country Name].currentmember * [Dim Water].[Water Name].[Water Name],left([Dim Country].[Country Name].currentmember.name,1 )= 'F'),
+		5,[Measures].[Fact Count]))on 1
+from [Water Clean];
+
+
+ --Câu 11: Liệt kê các quốc gia trong nam 2009 có số lượng mẫu nước lớn hơn 700.
+ --Manual:
+ select [Measures].[Fact Count] on columns,
+ non empty generate( [Dim Country].[Country Name].[Country Name].members,
+FILTER([Dim Country].[Country Name].[Country Name].members, [Measures].[Fact Count] >700)) on rows
+from [Water Clean]
+where [Dim Date].[Year].&[2009]
+--MDX:
+select [Measures].[Fact Count] on columns,
+[Dim Country].[Country Name].[Country Name].members 
+having  [Measures].[Fact Count] >700  on rows
+from [Water Clean]
+where [Dim Date].[Year].&[2009]
+
+
+ --Câu 12:  :  Tìm những quốc gia có mẫu nước có tỉ lệ phần trăm kim loại cao nhất lớn hơn 1% nhưng kết quả
+ --trung bình phải nhỏ hơn 110.
+ select {[Measures].[Maximum Composition Metal Percent],[Measures].[Maximum Result Mean Value]} on columns,
+except (
+filter([Dim Country].[Country Name].[Country Name],[Measures].[Maximum Composition Metal Percent]>1),
+filter([Dim Country].[Country Name].[Country Name],[Measures].[Maximum Result Mean Value] >110)
+)on rows
+from [Water Clean]
+
+
+--Câu 13: Mẫu nước có tên ATOK411340000 được xét nghiệm mấy lần
+select [Measures].[Fact Count] on columns
+from [Water Clean]
+where[Dim Water].[Water Name].&[ATOK411340000]
+
+
+--Câu 14: Top 5 quốc gia có mẫu nước có giá trị trung bình cao nhất trong năm 2005
+
+select [Measures].[Maximum Result Mean Value] on columns,
+topcount ([Dim Country].[Country Name].[Country Name].members ,5,[Measures].[Maximum Result Mean Value]) on rows
+from [Water Clean]
+where [Dim Date].[Year].&[2005]
+--Câu 15: Trừ nước pháp, liệt kê tỉ lệ phần trăm kim loại cao nhất, tỉ lệ phần trăm nhựa cao nhất, 
+--giá trị trung bình cao nhất của các quốc gia trong năm 2010 
+select {[Measures].[Maximum Composition Metal Percent],
+[Measures].[Maximum Composition Plastic Percent],
+[Measures].[Maximum Result Mean Value]} on columns,
+except (
+[Dim Country].[Country Name].[Country Name].members,
+[Dim Country].[Country Name].&[France]
+)on rows
+from [Water Clean]
+where [Dim Date].[Year].&[2009]
+
+
+
+
+---------------------------------------------------------
+ select [Measures].[Result Mean Value] on columns,
+intersect(
+[Dim Country].[Country Name].&[France],
+[Dim Country].[Country Name].&[Ireland]
+)on rows
+ from [Water Clean]
+  where [Dim Date].[Year].&[2010];
+
+
+
+-------------------------------------------
+ select [Measures].[Maximum Population Density] on columns,
+[Dim Country].[Country Name].[Country Name].members on rows
+ from [Water Clean]
+  where [Dim Date].[Year].&[2009];
+  
+select [Measures].[Fact Count] on columns,
+union
+([Dim Country].[Country Name].[All],
+[Dim Country].[Country Name].&[Czech Republic],
+[Dim Country].[Country Name].&[France]
+)on rows
+from [Water Clean]
+select [Measures].[Fact Count]on columns,
+[Dim Water].[Water Name].members on rows
+from [Water Clean]
+---------------------------------------------
+
+select [Measures].[Fact Count] on columns
+from [Water Clean]
+where[Dim Water].[Water Name].&[ATOK411340000]
+
