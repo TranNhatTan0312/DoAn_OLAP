@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31829.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "SSRS_WaterPollution", "SSRS_WaterPollution\SSRS_WaterPollution.rptproj", "{3EE15AEB-92B5-490A-A455-5A80C3F24D3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EE15AEB-92B5-490A-A455-5A80C3F24D3C}.Debug|Default.ActiveCfg = Debug
+		{3EE15AEB-92B5-490A-A455-5A80C3F24D3C}.Debug|Default.Build.0 = Debug
+		{3EE15AEB-92B5-490A-A455-5A80C3F24D3C}.Debug|Default.Deploy.0 = Debug
+		{3EE15AEB-92B5-490A-A455-5A80C3F24D3C}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{3EE15AEB-92B5-490A-A455-5A80C3F24D3C}.DebugLocal|Default.Build.0 = DebugLocal
+		{3EE15AEB-92B5-490A-A455-5A80C3F24D3C}.Release|Default.ActiveCfg = Release
+		{3EE15AEB-92B5-490A-A455-5A80C3F24D3C}.Release|Default.Build.0 = Release
+		{3EE15AEB-92B5-490A-A455-5A80C3F24D3C}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F3FBB5B-D778-4961-920E-6DD05FDB6A87}
+	EndGlobalSection
+EndGlobal
