@@ -27,3 +27,9 @@ The CD of final project includes these following folders:
 5. Text file: the information of group (member name, job)
 
 6. Document: project report (.docx)
+
+Các kỹ thuật thao tác trên dữ liệu đa chiều:
+- Cuộn lên (Roll up)
+- Truy xuống (Drill down)
+- Chọn và chiếu (Slice and dice )
+- Xoay chiều (Pivot )
