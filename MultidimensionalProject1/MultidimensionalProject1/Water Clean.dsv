@@ -1,0 +1,164 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c1965480-5571-47dc-970f-e648bb226d24" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Water Clean</ID>
+  <Name>Water Clean</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Water Clean</DataSourceID>
+  <Schema>
+    <xs:schema id="Water_x0020_Clean" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Water_x0020_Clean" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="f5fde88c-fd54-4d28-8703-852939e450fe">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Fact" msprop:design-time-name="cebfadcb-5155-4d69-90d9-9c8e794d1864" msprop:DbTableName="Fact" msprop:FriendlyName="Fact" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="2f749461-6fc4-44da-92b5-58859e80dcd7" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="_Year" msprop:design-time-name="808f7077-2721-4fe8-98a2-00cd1c10b966" msprop:DbColumnName="_Year" msprop:FriendlyName="_Year" type="xs:int" minOccurs="0" />
+                  <xs:element name="resultMeanValue" msprop:design-time-name="bf1315fd-8284-43cc-9925-040b4b2d5cd1" msprop:DbColumnName="resultMeanValue" msprop:FriendlyName="resultMeanValue" type="xs:double" minOccurs="0" />
+                  <xs:element name="water_name" msprop:design-time-name="7c12bd6b-2242-4171-b16b-bbedc2a0c855" msprop:DbColumnName="water_name" msprop:FriendlyName="water_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Country_name" msprop:design-time-name="d9f2e837-c687-4bb3-b89d-ced6182d6003" msprop:DbColumnName="Country_name" msprop:FriendlyName="Country_name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PopulationDensity" msprop:design-time-name="6e302084-933c-4c20-8f1e-24b579220fd4" msprop:DbColumnName="PopulationDensity" msprop:FriendlyName="PopulationDensity" type="xs:double" minOccurs="0" />
+                  <xs:element name="TouristMean_1990_2020" msprop:design-time-name="75fb5d4b-a347-4c18-b8a1-fd68de64f120" msprop:DbColumnName="TouristMean_1990_2020" msprop:FriendlyName="TouristMean_1990_2020" type="xs:int" minOccurs="0" />
+                  <xs:element name="composition_food_organic_waste_percent" msprop:design-time-name="dd31022a-9372-4259-8f9c-90455fd08b54" msprop:DbColumnName="composition_food_organic_waste_percent" msprop:FriendlyName="composition_food_organic_waste_percent" type="xs:double" minOccurs="0" />
+                  <xs:element name="composition_glass_percent" msprop:design-time-name="73263f91-ed0b-4152-86ab-600de54feb22" msprop:DbColumnName="composition_glass_percent" msprop:FriendlyName="composition_glass_percent" type="xs:double" minOccurs="0" />
+                  <xs:element name="composition_metal_percent" msprop:design-time-name="cd67d78a-42fd-4ddc-befb-539479a353c9" msprop:DbColumnName="composition_metal_percent" msprop:FriendlyName="composition_metal_percent" type="xs:double" minOccurs="0" />
+                  <xs:element name="composition_other_percent" msprop:design-time-name="cf3ff26d-f867-4881-93e4-3687ec251975" msprop:DbColumnName="composition_other_percent" msprop:FriendlyName="composition_other_percent" type="xs:double" minOccurs="0" />
+                  <xs:element name="composition_paper_cardboard_percent" msprop:design-time-name="67162b34-d266-429e-98b0-8dfb0177168d" msprop:DbColumnName="composition_paper_cardboard_percent" msprop:FriendlyName="composition_paper_cardboard_percent" type="xs:double" minOccurs="0" />
+                  <xs:element name="composition_plastic_percent" msprop:design-time-name="4ccda5d3-bc8b-4f02-ba67-ffcad94dc4ea" msprop:DbColumnName="composition_plastic_percent" msprop:FriendlyName="composition_plastic_percent" type="xs:double" minOccurs="0" />
+                  <xs:element name="composition_rubber_leather_percent" msprop:design-time-name="189e6cce-1a06-45cf-a81e-a54080158cfb" msprop:DbColumnName="composition_rubber_leather_percent" msprop:FriendlyName="composition_rubber_leather_percent" type="xs:double" minOccurs="0" />
+                  <xs:element name="composition_wood_percent" msprop:design-time-name="769b4c60-0720-4d5d-b3f8-f6d50442d284" msprop:DbColumnName="composition_wood_percent" msprop:FriendlyName="composition_wood_percent" type="xs:double" minOccurs="0" />
+                  <xs:element name="composition_yard_garden_green_waste_percent" msprop:design-time-name="8bd10064-0a7b-4cc1-8c3a-639f71921c50" msprop:DbColumnName="composition_yard_garden_green_waste_percent" msprop:FriendlyName="composition_yard_garden_green_waste_percent" type="xs:double" minOccurs="0" />
+                  <xs:element name="waste_treatment_recycling_percent" msprop:design-time-name="1294ae6e-6d0a-4e1d-bab4-5009736ff9ac" msprop:DbColumnName="waste_treatment_recycling_percent" msprop:FriendlyName="waste_treatment_recycling_percent" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Date" msprop:design-time-name="93719640-df58-49e1-94e4-f7d280fd207e" msprop:DbTableName="Dim_Date" msprop:FriendlyName="Dim_Date" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="_Year" msprop:design-time-name="14fa1682-8f91-4aa6-8b71-313ddd573524" msprop:DbColumnName="_Year" msprop:FriendlyName="_Year" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Water" msprop:design-time-name="87ed824b-a59f-4e0f-85fc-bda5c8c1ebaf" msprop:DbTableName="Dim_Water" msprop:FriendlyName="Dim_Water" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="water_name" msprop:design-time-name="5ddfc3cf-b2c8-4289-ad9e-7b610dfed74e" msprop:DbColumnName="water_name" msprop:FriendlyName="water_name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="observedProperty" msprop:design-time-name="7912ad80-acd3-4ca3-8bfb-04e1edbe9c9e" msprop:DbColumnName="observedProperty" msprop:FriendlyName="observedProperty" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="resultUom" msprop:design-time-name="d6202a4b-21c7-4f8e-8696-1298f3a18eff" msprop:DbColumnName="resultUom" msprop:FriendlyName="resultUom" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Country" msprop:design-time-name="5b9f1a7f-7881-4464-b19e-3ad045f3b5ef" msprop:DbTableName="Dim_Country" msprop:FriendlyName="Dim_Country" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Country_name" msprop:design-time-name="4f3216a7-ad72-494c-a30e-ca24e7beee45" msprop:DbColumnName="Country_name" msprop:FriendlyName="Country_name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Date_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Date" />
+          <xs:field xpath="_Year" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Water_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Water" />
+          <xs:field xpath="water_name" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Country_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Country" />
+          <xs:field xpath="Country_name" />
+        </xs:unique>
+        <xs:keyref name="FK_FACT_DATE" refer="dbo_Dim_Date_Constraint1">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="_Year" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACT_WATER" refer="dbo_Dim_Water_Constraint1">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="water_name" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACT_COUNTRY" refer="dbo_Dim_Country_Constraint1">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="Country_name" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Water_x0020_Clean xmlns="" />
+  </Schema>
+</DataSourceView>

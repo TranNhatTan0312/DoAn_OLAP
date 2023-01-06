@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31829.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "SSAS_Water_Edited", "SSAS_Water_Edited\SSAS_Water_Edited.dwproj", "{AB8E68D4-C3AC-4361-AAB4-A24D2453FE91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB8E68D4-C3AC-4361-AAB4-A24D2453FE91}.Development|Default.ActiveCfg = Development
+		{AB8E68D4-C3AC-4361-AAB4-A24D2453FE91}.Development|Default.Build.0 = Development
+		{AB8E68D4-C3AC-4361-AAB4-A24D2453FE91}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43AAD3A3-E769-484F-96D9-55710BAA010D}
+	EndGlobalSection
+EndGlobal

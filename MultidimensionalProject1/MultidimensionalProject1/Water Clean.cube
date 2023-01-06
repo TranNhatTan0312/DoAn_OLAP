@@ -1,0 +1,430 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="fe25679a-b28f-4858-9018-1fe38fb45699" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Water Clean</ID>
+  <Name>Water Clean</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="8" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-10739" scrolltop="-4440" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="35084" y="16801" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Water" left="9723" top="5204" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3413" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000550d0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_Water" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Country" left="2163" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3016" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000c80b0000af050000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_Country" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Date" left="2171" top="11255" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="1455" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000af050000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_Date" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fact" left="20" top="3855" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="7303" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000871c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Fact" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7023" top="5956" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_WATER]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="12" destattachpoint="35" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9723" y="6355" />
+              <point x="7323" y="6355" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3272" top="956" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_COUNTRY]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="4" sourceattachpoint="5" destattachpoint="12" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3671" y="1455" />
+              <point x="3671" y="3855" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3272" top="8555" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_DATE]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="4" sourceattachpoint="4" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3671" y="11255" />
+              <point x="3671" y="8855" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-10739</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4440</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="26034a3e-f573-4eb8-99ec-9cdb75e3cfe2">
+      <ID>Dim Country</ID>
+      <Name>Dim Country</Name>
+      <DimensionID>Dim Country</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="fc47c8cd-82d0-43a4-b0c2-a87bc54ebd96">
+          <AttributeID>Country Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="8baa8911-c3a5-480f-a6c8-37165065486d">
+      <ID>Dim Water</ID>
+      <Name>Dim Water</Name>
+      <DimensionID>Dim Water</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3ec1942c-4cd2-4d6e-a4eb-d6b95423bfe7">
+          <AttributeID>Water Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ce51baa8-abe8-4d1b-8a15-16f5a31e720d">
+          <AttributeID>Observed Property</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1df2845c-ae26-4741-95fc-d748f29a2d46">
+          <AttributeID>Result Uom</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="35eff489-c592-4d26-8ea1-b79593137e0d">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <DimensionID>Dim Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="27249d34-b76e-41bc-91ff-5967abeac4bd">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="c0b94ad3-8dc4-4418-ab54-a65505307aec">
+      <ID>Fact</ID>
+      <Name>Fact</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="867aa64f-b2c8-44e3-81fb-d024835fa5f8">
+          <ID>Result Mean Value</ID>
+          <Name>Result Mean Value</Name>
+          <Source dwd:design-time-name="255a2cfb-8f0a-4759-9dbc-2ce6037f10c9">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0d163383-cb94-4fe2-b45c-066d0e25ffb4">
+              <TableID>dbo_Fact</TableID>
+              <ColumnID>resultMeanValue</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2cbed905-c56d-42a0-a7a1-fb78cc8303d6">
+          <ID>Population Density</ID>
+          <Name>Population Density</Name>
+          <Source dwd:design-time-name="378a2b3b-8c04-4666-bc91-236aa32d3bed">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1e1c0ce0-4a76-4a90-b79a-edc3dcd5909b">
+              <TableID>dbo_Fact</TableID>
+              <ColumnID>PopulationDensity</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d8372797-1956-4989-9765-9778db626a6a">
+          <ID>Tourist Mean 1990 2020</ID>
+          <Name>Tourist Mean 1990 2020</Name>
+          <Source dwd:design-time-name="07efc309-8045-46e7-99b2-991a3a73efc9">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="42a3ef46-eba4-4fa9-bcb3-64d101e7bec4">
+              <TableID>dbo_Fact</TableID>
+              <ColumnID>TouristMean_1990_2020</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0f0e0271-9b87-4499-9b41-d88b13a7d893">
+          <ID>Composition Food Organic Waste Percent</ID>
+          <Name>Composition Food Organic Waste Percent</Name>
+          <Source dwd:design-time-name="a8beb728-e24e-4aea-b8cc-c69f86bf1eb6">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ce134761-43ac-4129-836a-c62f44e3953c">
+              <TableID>dbo_Fact</TableID>
+              <ColumnID>composition_food_organic_waste_percent</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d6388d60-3d25-4b3b-9931-cf9cf17d63f2">
+          <ID>Composition Glass Percent</ID>
+          <Name>Composition Glass Percent</Name>
+          <Source dwd:design-time-name="ae20aad7-63b2-4922-ace6-7ea4d6335e76">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7ea3766c-0a0d-4b66-8f02-c046008bb9c2">
+              <TableID>dbo_Fact</TableID>
+              <ColumnID>composition_glass_percent</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6a605c49-18ea-4d58-ae19-d30c557d7336">
+          <ID>Composition Metal Percent</ID>
+          <Name>Composition Metal Percent</Name>
+          <Source dwd:design-time-name="0f45d1ad-cae2-4007-be5e-99a37dddae08">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f0bdcc9e-db84-4d05-becd-0a1304818908">
+              <TableID>dbo_Fact</TableID>
+              <ColumnID>composition_metal_percent</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d8029bea-5092-41a3-8fce-f37ae3541711">
+          <ID>Composition Other Percent</ID>
+          <Name>Composition Other Percent</Name>
+          <Source dwd:design-time-name="922e0bd4-a818-4244-b1c9-bf4edcded3c5">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="765e170f-14e6-4c78-a31b-aedf9e80018f">
+              <TableID>dbo_Fact</TableID>
+              <ColumnID>composition_other_percent</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6fef11f6-f3f4-47ce-9efa-75e957c0553c">
+          <ID>Composition Paper Cardboard Percent</ID>
+          <Name>Composition Paper Cardboard Percent</Name>
+          <Source dwd:design-time-name="31008991-8317-4433-ab69-cbfbc4b01f26">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6d0eb98c-ea60-488f-98d7-349f0fb5b210">
+              <TableID>dbo_Fact</TableID>
+              <ColumnID>composition_paper_cardboard_percent</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c5880a54-e79b-40cc-ae50-3730911c9d89">
+          <ID>Composition Plastic Percent</ID>
+          <Name>Composition Plastic Percent</Name>
+          <Source dwd:design-time-name="d3ec2829-753a-4490-81a7-72e12555e5b3">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="31fa53aa-beed-4964-b42b-0de4a8abb2ff">
+              <TableID>dbo_Fact</TableID>
+              <ColumnID>composition_plastic_percent</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="03daae10-6b42-4768-be97-6cccd63346ad">
+          <ID>Composition Rubber Leather Percent</ID>
+          <Name>Composition Rubber Leather Percent</Name>
+          <Source dwd:design-time-name="78a81b74-9f11-4e19-83cc-4e73ec5032b4">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="fb445127-4b8d-4e59-a728-c2ff90b91601">
+              <TableID>dbo_Fact</TableID>
+              <ColumnID>composition_rubber_leather_percent</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="47776796-b4f3-40ea-9bed-c416a633f09e">
+          <ID>Composition Wood Percent</ID>
+          <Name>Composition Wood Percent</Name>
+          <Source dwd:design-time-name="7f7eb68a-f95d-46b7-8eca-737da017ddb3">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d1cd1019-0399-4653-89e2-76121f14e6d5">
+              <TableID>dbo_Fact</TableID>
+              <ColumnID>composition_wood_percent</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="5b43054e-5e93-42e2-a463-f1ab3d2494c6">
+          <ID>Composition Yard Garden Green Waste Percent</ID>
+          <Name>Composition Yard Garden Green Waste Percent</Name>
+          <Source dwd:design-time-name="47e55c4b-af7a-4e69-ad9c-2ee7d3bd6fa0">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f0c457c8-6e5d-4991-a59b-28b5ab974b55">
+              <TableID>dbo_Fact</TableID>
+              <ColumnID>composition_yard_garden_green_waste_percent</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3d5e5d71-863c-4ec8-a2ae-d8bf5687720a">
+          <ID>Waste Treatment Recycling Percent</ID>
+          <Name>Waste Treatment Recycling Percent</Name>
+          <Source dwd:design-time-name="ae23f635-2282-4dec-9e14-b8cbf66d9376">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b9533b76-d842-46f7-90e0-b8ffeaf5f4c1">
+              <TableID>dbo_Fact</TableID>
+              <ColumnID>waste_treatment_recycling_percent</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="513505ae-8ade-4f1d-8a97-bcdc17d8fdf5">
+          <ID>Fact Count</ID>
+          <Name>Fact Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="c3870562-7e47-4716-ab71-c1974a7f3031">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="4a0b94ed-8bfd-46d1-9588-b51ea6c2ae35">
+              <TableID>dbo_Fact</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5f1a393a-ec1f-4e62-ac2d-f4880f878821">
+          <CubeDimensionID>Dim Country</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="737e75d7-238b-401d-9fb3-5f0b84db5e07">
+              <AttributeID>Country Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c61b143c-699f-41e9-980b-048db5da08e1">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2cb2e82b-a916-49c5-a630-24402e153680">
+                    <TableID>dbo_Fact</TableID>
+                    <ColumnID>Country_name</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5dd72ccd-f5ae-4e07-a1f1-02d5a2407e65">
+          <CubeDimensionID>Dim Water</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7735c598-8f39-4975-8394-6dfa9d61aa5f">
+              <AttributeID>Water Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ac5c4c6f-66a4-441d-8205-1b15073780f1">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7bc6f1f6-672e-4e19-8ff5-dd5bfeb66aff">
+                    <TableID>dbo_Fact</TableID>
+                    <ColumnID>water_name</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d8083f6f-3c20-488f-a650-71c80f8b2059">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4afe1bc7-7852-4c6c-9fab-21e37ab885a7">
+              <AttributeID>Year</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="89473dd7-f1a5-4b57-a13a-3dffe5dd9dc0">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8b3096b2-26fa-43b1-8f7a-65e233817432">
+                    <TableID>dbo_Fact</TableID>
+                    <ColumnID>_Year</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="24b54323-f5af-49b4-b57c-67640e9bd254">
+    <DataSourceViewID>Water Clean</DataSourceViewID>
+  </Source>
+</Cube>
