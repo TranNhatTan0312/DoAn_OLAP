@@ -28,8 +28,13 @@ The CD of final project includes these following folders:
 
 6. Document: project report (.docx)
 
-Các kỹ thuật thao tác trên dữ liệu đa chiều:
-- Cuộn lên (Roll up)
-- Truy xuống (Drill down)
-- Chọn và chiếu (Slice and dice )
-- Xoay chiều (Pivot )
+
+# Techniques for manipulating multidimensional data:
+- Roll up
+- Drill down
+- Slice and dice 
+- Pivot
+
+#SSRS tools:
+- PowerBI desktop
+- Visual studio report builder
