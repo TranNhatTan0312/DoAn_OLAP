@@ -3,6 +3,13 @@
 For more about this project:
 https://drive.google.com/drive/folders/1gdcIsCu5AbrGVNqC_QJD2NkirqsafERc?usp=sharing
 
+# Summary the Dataset:
+The basis of this dataset is taken from WaterBase water quality data shared on EAA. It has 20.000 rows and 29 columns. The outcome of project is the data warehouse, visualize, query, analysis and report of the Water Quality Dataset.
+
+
+![image](https://github.com/TranNhatTan0312/DoAn_OLAP/assets/86831854/ac4ab6a7-b98f-49da-ac5b-80212be01de0)
+
+
 # The project is about:
 
 1. SSIS process (describe the process of choosing data for the warehouse).
