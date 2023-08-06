@@ -9,6 +9,9 @@ The basis of this dataset is taken from WaterBase water quality data shared on E
 
 ![image](https://github.com/TranNhatTan0312/DoAn_OLAP/assets/86831854/ac4ab6a7-b98f-49da-ac5b-80212be01de0)
 
+![image](https://github.com/TranNhatTan0312/DoAn_OLAP/assets/86831854/96fa28dc-554f-4098-87c3-826a4f42d547)
+
+![image](https://github.com/TranNhatTan0312/DoAn_OLAP/assets/86831854/8388768d-5e11-471e-a77c-999d4a74de92)
 
 # The project is about:
 
