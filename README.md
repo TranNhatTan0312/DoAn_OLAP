@@ -35,6 +35,6 @@ The CD of final project includes these following folders:
 - Slice and dice 
 - Pivot
 
-#SSRS tools:
+# SSRS tools:
 - PowerBI desktop
 - Visual studio report builder
